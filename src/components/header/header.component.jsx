@@ -15,8 +15,9 @@ const Header = () => (
             <li><a href=''>Home</a></li>
             <li><a href=''>Services</a></li>
             <li><a href=''>Sign in</a></li>
+            <li><a href=''>Book</a></li>
             <li><a href=''>Contact</a></li>
-            <a href=''id="menu-icon"></a>
+            
           </ul>
         </nav>
       </div>
