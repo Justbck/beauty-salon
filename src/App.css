@@ -1,6 +1,8 @@
 body {
   font-family: 'Khula', sans-serif;
   font-weight: 400;
+  background-color: rgb(223, 196, 196);
+
 }
 
 h1, h2, h3, h4, h5, h6 {

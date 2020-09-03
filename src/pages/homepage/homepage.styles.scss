@@ -1,21 +1,17 @@
 .homepage{
-
     display: flex;
     flex-direction: wrap;
     align-items: center;
     padding: 12%;
-    background-color: rgb(223, 196, 196);
-
+  
 
     .image {
+
         width:400px;
         border-radius: 300px;
     }
-
-
     .text-wrapper{
         color:rgb(68, 53, 53);
-        padding:60px;
         font-weight: 800;
     }
 
@@ -27,11 +23,6 @@
 }
 
 
-
-
-
-
-
 .text{
     padding:5px 50px;
 }
@@ -39,4 +30,42 @@
 .text3{
     padding: 0 50px;
     float:right;
+}
+
+@media(max-width:700px){
+
+    .homepage{
+
+        display: inline;      
+        .image {
+            margin-top:60px;
+            padding: 10%;
+            width:400px;
+            border-radius: 600px;
+        }
+    
+    
+        .text-wrapper{
+            color:rgb(68, 53, 53);
+            padding:60px;
+            font-weight: 800;
+        }
+    
+        .deco {
+            font-size:40px;
+            color:rgb(255, 255, 255);
+        }
+        
+    }
+    
+    
+    .text{
+        padding:5px 50px;
+    }
+    
+    .text3{
+        padding: 0 50px;
+        float:right;
+    }
+
 }

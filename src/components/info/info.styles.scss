@@ -101,7 +101,58 @@
 }
 
 
+
+
+
 @media (max-width:700px){
+
+    .info-nav-bar {
+  
+        color: #FFF;
+        background-color: #7c5252;
+        width:100%;
+        display: flex;
+
+        
+    .phone{
+        width:30%;
+    }
+    
+    .opening-hours{
+        width:20px;
+    }
+    
+    .media{
+        padding-left:4% ;
+    }
+    
+    
+        
+        
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+        p > a:hover{
+            color: #d9d9d9;
+            text-decoration:  underline;
+        }
+        
+        ul {  
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+        }
+        
+        
+        .social-icon {
+            color: #fff;
+        }
+        
+        .social-icons li {
+            display: inline;
+        }
+    }
 
     
 }

@@ -8,13 +8,13 @@ const HomePage = () => (
             <img className='image' src='https://i.pinimg.com/564x/05/36/5d/05365de990be1be3557d158a449f02d4.jpg'></img>
         </div>
 
-        <div className ='item'>
+
             <div className='text-wrapper'>
                 <h1 className = 'text'>Book now <span className = 'deco'>&</span></h1>
                 <h1 className = 'text'> Experience the best beauty services</h1>
                 <h3 className = 'text3'>*even today!</h3>
             </div>
-        </div>
+        
 
 
     </div>
