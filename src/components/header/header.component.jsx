@@ -14,7 +14,7 @@ const Header = () => (
         
             <li><a href=''>Home</a></li>
             <li><a href=''>Services</a></li>
-            <li><a href=''>Sign-up</a></li>
+            <li><a href=''>Sign in</a></li>
             <li><a href=''>Contact</a></li>
             <a href=''id="menu-icon"></a>
           </ul>

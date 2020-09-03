@@ -1,0 +1,32 @@
+.container{
+    padding-top:150px;
+}
+
+.title1 {
+    text-align: center;
+}
+
+
+.service-page{
+    
+    display: flex;
+    flex-direction: wrap;
+    align-items: center;
+    justify-content: center;
+    padding:40px;
+}
+
+.name{
+    text-align: left;
+    padding:15px 50px;
+    border-bottom:1px solid #b18b8b;
+
+
+}
+
+.price{
+    text-align: right;
+    padding:15px 50px;
+    border-bottom:1px solid #b18b8b;
+
+}
