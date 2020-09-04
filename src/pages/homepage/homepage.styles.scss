@@ -6,8 +6,7 @@
   
 
     .image {
-
-        width:400px;
+        width: 400px;
         border-radius: 300px;
     }
     .text-wrapper{
@@ -50,10 +49,19 @@
 @media(max-width:700px){
 
     .homepage{
+        overflow: hidden;
+
+        .back-t {
+            padding:0 ;
+        }
+
+        .back-p {
+            padding:0 ;
+        }
 
         display: inline;      
         .image {
-            margin-top:60px;
+            margin-top:80px;
             padding: 10%;
             width:400px;
             border-radius: 600px;
@@ -73,6 +81,7 @@
         
     }
     
+
     
     .text{
         padding:5px 50px;

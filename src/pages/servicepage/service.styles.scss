@@ -1,9 +1,13 @@
-.container{
-    padding-top:150px;
-}
 
 .title1 {
+    
     text-align: center;
+}
+
+.back-title {
+    font-size:70px;
+    text-align: center;
+    color:#b18b8b;
 }
 
 
@@ -13,7 +17,6 @@
     flex-direction: wrap;
     align-items: center;
     justify-content: center;
-    padding:40px;
 }
 
 .name{

@@ -11,7 +11,6 @@ const Header = () => (
         <div id="navigation-bar">
         <nav>
           <ul>
-        
             <li><a href=''>Home</a></li>
             <li><a href=''>Services</a></li>
             <li><a href=''>Sign in</a></li>
