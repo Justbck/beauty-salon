@@ -20,13 +20,13 @@ class Pricing extends React.Component {
                 imageUrl:'https://i.pinimg.com/564x/b2/72/fe/b272fe919deb4780b3b668cd3a8f9833.jpg'
             },
             {
-                name:'Gel Maniucure/Pedcicure',
+                name:'Gel Maniucure',
                 id:3,
                 imageUrl:'https://i.pinimg.com/474x/5f/52/e1/5f52e1bf29f04d73e58024569c3be3db.jpg'
 
             },
             {
-                name:'Shellac Manicure/Pedicure',
+                name:'Shellac Manicure',
                 id:4,
                 imageUrl:'https://i.pinimg.com/564x/a2/d2/97/a2d2972e5c08bdcaca03a420f0e25e79.jpg'
             },
