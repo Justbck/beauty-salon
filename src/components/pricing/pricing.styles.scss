@@ -1,10 +1,27 @@
-.pricing-menu {
-    align-self: center;
-    padding:50px 20px;
-    justify-content: center;
 
+    .pricing-menu{
+        justify-content: center;
+    }
+    
     .title1{
-        padding-top:130px;
+        padding-top:160px;
+        text-align: center;
     }
 
-}
+    .title-b{
+        color:rgba(172, 115, 115, 0.048);
+        left:37%;
+        top:120px;
+        font-size:70px;
+        position: absolute;
+
+    }
+
+
+    @media(max-width:700px){
+        .title-b{
+        left:16%;
+        }
+       
+    }
+

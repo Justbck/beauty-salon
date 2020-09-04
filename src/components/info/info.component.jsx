@@ -5,7 +5,7 @@ const Info = () => (
     <div className = 'info-nav-bar'>
             <div className = 'phone'>Phone: xxx xxx xxx</div>
 
-                <span className = 'days'>Days: Monday-Friday <br/>Hours: 7am - 9pm </span>
+                <span className = 'days'>Days: Monday-Friday <br/>Hours: 8am - 9pm </span>
 
             
             <div className = 'media'>

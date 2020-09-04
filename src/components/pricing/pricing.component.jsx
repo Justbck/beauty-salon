@@ -51,6 +51,7 @@ class Pricing extends React.Component {
              <div className='pricing-menu'>
 
              <h1 className ='title1'>Our services</h1>
+             <h1 className ='title-b'>Our services</h1>
                 {
                  this.state.sections.map(({id,name,imageUrl}) => (
                      <ServiceItem key = {id} name={name} imageUrl={imageUrl}/>
