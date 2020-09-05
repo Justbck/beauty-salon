@@ -65,9 +65,10 @@ class SignUp extends React.Component {
             <div className = 'title'>
                 <h2>I do not have an account</h2>
                     <span>Sign up with your email and password</span>
+                    </div>
                 
                 <form className = 'sign-up-form' onSubmit = {this.handleSubmit}>
-
+                    <div className='group'>
                     <input 
                         type = 'text'
                         name = 'displayName'
@@ -76,7 +77,13 @@ class SignUp extends React.Component {
                         label = 'Display Name'
                         required
                     />
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Name</label>
+                    </div>
+                    
 
+                    <div className='group'>
                     <input 
                         type = 'email'
                         name = 'email'
@@ -85,7 +92,13 @@ class SignUp extends React.Component {
                         label = 'Email'
                         required
                     />
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Email</label>
+                    </div>
+                  
 
+                    <div className='group'>
                     <input 
                         type = 'password'
                         name = 'password'
@@ -94,7 +107,12 @@ class SignUp extends React.Component {
                         label = 'Password'
                         required
                     />
-
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Password</label>
+                    </div>
+                    
+                    <div className='group'>
                     <input 
                         type = 'password'
                         name = 'confirmPassword'
@@ -103,8 +121,13 @@ class SignUp extends React.Component {
                         label = 'Confirm Password'
                         required
                     />
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Confirm Password</label>
+                    </div>
+                   
 
-                    <button type= 'submit'> sign up </button>
+                    <button className ='sub-button' type= 'submit'> sign up </button>
                    
 
 
@@ -113,7 +136,7 @@ class SignUp extends React.Component {
                 
                 </form>
 
-            </div>
+            
             </div>
 
         )
