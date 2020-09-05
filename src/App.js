@@ -10,23 +10,63 @@ import HomePage from './pages/homepage/homepage.component';
 import Contact from './pages/contact/contact.component';
 import ServicePage from './pages/servicepage/service.component';
 import Toolbar from './components/Toolbar';
-import Pricing from './components/pricing/pricing.component';
+import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
+import YourBooking from './pages/your-booking/your-booking.component';
 
-
-
+import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 
 const data = [
-  { start_date:'2020-06-10 6:00', end_date:'2020-06-10 8:00', text:'Event 1', id: 1 },
-  { start_date:'2020-06-13 10:00', end_date:'2020-06-13 18:00', text:'Event 2', id: 2 }
+  { start_date:'2020-06-10 6:00', end_date:'2020-06-10 8:00', text:'Booked', id: 1 },
+  { start_date:'2020-06-13 10:00', end_date:'2020-06-13 18:00', text:'Booked', id: 2 }
 ];
 
 
-class App extends Component {
+class App extends React.Component {
 
-  state = {
-    currentTimeFormatState: true,
-    messages: []
-};
+
+  constructor() {
+    super();
+
+    this.state = {
+      currentTimeFormatState: true,
+      messages: [],
+      currentUser:null
+  };
+}
+
+unsubscribeFromAuth = null;
+
+
+componentDidMount() {
+
+  this.unsubscribeFromAuth  = auth.onAuthStateChanged( async userAuth => {
+    
+    if(userAuth) {
+      const userRef = await createUserProfileDocument(userAuth);
+
+
+      userRef.onSnapshot(snapShot => {
+        this.setState({
+          currentUser: {
+            id: snapShot.id,
+            ...snapShot.data()
+          }
+        });
+        console.log(this.state)
+      });
+    }
+    this.setState({ currentUser: userAuth })
+
+
+
+  });
+}
+
+componentWillUnmount(){
+  this.unsubscribeFromAuth();
+}
+
+  
 addMessage(message) {
     const maxLogLength = 5;
     const newMessage = { message };
@@ -54,18 +94,14 @@ logDataUpdate = (action, ev, id) => {
   return (
 
     <div className="app-container">
-      <Header/>
+      <Header currentUser = {this.state.currentUser}/>
       <Switch>
       <div>
         <Route exact path = '/' component = {HomePage}/>
         <Route path = '/service' component = {ServicePage}/>
         <Route path = '/contact' component = {Contact}/>
-
-        <Route path = '/pricing'>
-        <Pricing/>
-        </Route>
-
-
+        <Route path = '/signin' component ={SignInAndSignUpPage}/>
+        <Route path = '/your-booking' component = {YourBooking}/>
 
         <Route path = '/book'>
         <div>

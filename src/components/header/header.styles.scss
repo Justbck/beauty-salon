@@ -1,9 +1,67 @@
-/* FONT IMPORTED */
+.header{
 
+    position: fixed;
+    width:100%;
+    overflow: hidden;
+    width: 100%;
+
+}
+
+.links{
+  text-align: center;
+  list-style-type: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 15px;
+
+
+}
+
+.link{
+
+  font-size: 17px;
+  text-decoration: none;
+  color: #241919;
+  padding: 14px;
+  transition: .3s;
+
+
+  &:hover {
+    color: #ffffff;
+    text-shadow: 2px 2px 10px seashell;
+    cursor: pointer;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 
 .header{
     position: fixed;
     width:100%;
+    overflow: hidden;
+    width: 100%;
+
+
 
 
     .link{
@@ -12,18 +70,14 @@
       
 
 
-    nav {
-        overflow: hidden;
-        width: 100%;
-
-
       
-        ul {
+        .list {
           text-align: center;
           list-style-type: none;
           list-style-type: none;
           margin: 0;
           padding: 15px;
+      
 
           li {
             display: inline;
@@ -48,6 +102,7 @@
               &:hover {
                 color: #ffffff;
                 text-shadow: 2px 2px 10px seashell;
+                cursor: pointer;
               }
         
               &:hover::after {
@@ -60,7 +115,7 @@
         }
     }
 
-}
+*/
 
 
 

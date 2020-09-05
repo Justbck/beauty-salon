@@ -1,27 +1,36 @@
 import React from 'react';
 import './header.styles.scss';
 import {Link} from 'react-router-dom';
-
+import { auth } from '../../firebase/firebase.utils';
 
 import Info from '../info/info.component';
 
 
 
-const Header = () => (
+const Header = ({ currentUser }) => (
     <div className='header'>
         <Info/>
-        <div id="navigation-bar">
-        <nav>
-          <ul>
-            <Link className='link' to ='/'><li><a>Home</a></li></Link>
-            <Link className='link' to = 'service'><li><a>Services</a></li></Link>
-            <Link className='link'><li><a>Sign in</a></li></Link>
+      
+        <div className='links'>
+            <Link className='link' to ='/'>Home</Link>
+            <Link className='link' to = '/service'>Services</Link>
+            <Link className='link' to = '/contact'>Contact</Link>
+            {
+              currentUser ? (
+             
+              <div className= 'link' onClick={() => auth.signOut()}>
+               Sign out  
+              </div>
+              ) : (
+              <Link className='link' to ='/signin'>
+                Sign in
+              </Link>
+              
+            )}
 
-            <Link className='link' to = '/contact'><li><a>Contact</a></li></Link>
-            
-          </ul>
-        </nav>
-      </div>
+          </div>
+          
+      
         
     </div>
   
