@@ -1,6 +1,11 @@
 
     .pricing-menu{
+        margin:0 50px;
         justify-content: center;
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: space-between;
+        padding:5%;
     }
     
     .title1{

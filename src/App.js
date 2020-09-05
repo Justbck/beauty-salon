@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import Scheduler from './components/Scheduler';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import MessageArea from './components/MessageArea';
+import { connect } from 'react-redux';
+
+
 
 import './App.css';
 
@@ -14,10 +17,15 @@ import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up
 import YourBooking from './pages/your-booking/your-booking.component';
 
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
+import { setCurrentUser } from './redux/user/user.actions';
+
+
+
+
+
 
 const data = [
-  { start_date:'2020-06-10 6:00', end_date:'2020-06-10 8:00', text:'Booked', id: 1 },
-  { start_date:'2020-06-13 10:00', end_date:'2020-06-13 18:00', text:'Booked', id: 2 }
+ 
 ];
 
 
@@ -29,8 +37,7 @@ class App extends React.Component {
 
     this.state = {
       currentTimeFormatState: true,
-      messages: [],
-      currentUser:null
+      messages: []
   };
 }
 
@@ -39,6 +46,8 @@ unsubscribeFromAuth = null;
 
 componentDidMount() {
 
+  const {setCurrentUser} = this.props;
+
   this.unsubscribeFromAuth  = auth.onAuthStateChanged( async userAuth => {
     
     if(userAuth) {
@@ -46,19 +55,13 @@ componentDidMount() {
 
 
       userRef.onSnapshot(snapShot => {
-        this.setState({
-          currentUser: {
+          setCurrentUser({
             id: snapShot.id,
             ...snapShot.data()
-          }
-        });
-        console.log(this.state)
+          });
       });
     }
-    this.setState({ currentUser: userAuth })
-
-
-
+    setCurrentUser(userAuth);
   });
 }
 
@@ -94,13 +97,13 @@ logDataUpdate = (action, ev, id) => {
   return (
 
     <div className="app-container">
-      <Header currentUser = {this.state.currentUser}/>
+      <Header/>
       <Switch>
       <div>
         <Route exact path = '/' component = {HomePage}/>
         <Route path = '/service' component = {ServicePage}/>
         <Route path = '/contact' component = {Contact}/>
-        <Route path = '/signin' component ={SignInAndSignUpPage}/>
+        <Route path = '/signin' render = {() => this.props.currentUser ? (<Redirect to = '/' />) : (<SignInAndSignUpPage/>)}/>
         <Route path = '/your-booking' component = {YourBooking}/>
 
         <Route path = '/book'>
@@ -133,4 +136,16 @@ logDataUpdate = (action, ev, id) => {
 }
 }
 
-export default App;
+
+const mapStateToProps = ({user}) => ({
+  currentUser: user.currentUser
+});
+
+
+
+const mapDispatchToProps = dispatch => ({
+  setCurrentUser: user => dispatch(setCurrentUser(user))
+})
+
+
+export default connect(null, mapDispatchToProps)(App);

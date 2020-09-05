@@ -50,7 +50,7 @@ class SignUp extends React.Component {
     handleChange = event => {
         const {name,value} = event.target;
         this.setState({[name]: value});
-    }
+    };
 
 
 
@@ -61,7 +61,7 @@ class SignUp extends React.Component {
 
 
         return (
-
+            <div className = "sign-up">
             <div className = 'title'>
                 <h2>I do not have an account</h2>
                     <span>Sign up with your email and password</span>
@@ -113,6 +113,7 @@ class SignUp extends React.Component {
                 
                 </form>
 
+            </div>
             </div>
 
         )

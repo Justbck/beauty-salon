@@ -1,18 +1,14 @@
 .item1{
-    display: inline-block;
-    justify-content: space-between;
-    padding: 50px 40px;
-
 
 
     .booking{
-        display: inline-flex;
+        display: flex;
     }
 
     .button .button-link{
 
 
-        margin:100px 50px;
+        margin:20px 50px;
         padding:12px 12px;
         border:none;
         -o-transition:1s;
@@ -52,7 +48,7 @@
 
     .title1{
         background-color:rgba(250, 250, 250, 0.24);
-        width:500px;
+        width:450px;
         padding:20px;
         border:4px solid rgba(112, 85, 85, 0.11);
     }

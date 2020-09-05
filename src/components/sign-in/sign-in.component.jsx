@@ -36,14 +36,16 @@ class SignIn extends React.Component {
     render() {
         return (
             <div className = 'sign-in'>
+
                 <h2> I've already been here! </h2>
                 <span>Sign in</span>
 
             <form onSubmit = {this.handleSubmit}>
-                <input name = "email" type = "email" value = {this.state.email} onChange = {this.handleChange} required/>
-                <label>Email</label>
+              
+                <input name = "email"  type = "email" value = {this.state.email} onChange = {this.handleChange} required/>
+    
                 <input name = "password" type = "password" value ={this.state.email} onChange = {this.handleChange} required />
-                <label>Password</label>
+            
 
 
                 <button className = 'sign-in-button' type = "submit" value = "Submit Form">sign in</button>
