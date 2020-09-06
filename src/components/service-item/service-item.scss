@@ -56,7 +56,7 @@
    
     
     .image-ser{
-        width:210px;
+        width:40%;
         height: 300px;
         background-size: 100% 100%;
         transition:.5s;
@@ -76,13 +76,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 20px 0px;
+        padding: 0px 0px;
         margin:0;
         width:100%;
-        overflow: hidden;
-      
-    
-       
+        overflow: hidden;      
     }
 
     .text-space{

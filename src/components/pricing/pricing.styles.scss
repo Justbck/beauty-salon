@@ -1,6 +1,5 @@
 
     .pricing-menu{
-        margin:0 50px;
         justify-content: center;
         display: flex;
         flex-wrap:wrap;
@@ -26,6 +25,10 @@
     @media(max-width:700px){
         .title-b{
         left:16%;
+        }
+
+        .pricing-menu{
+            padding:5% 0% ;
         }
        
     }

@@ -9,8 +9,18 @@ import Info from '../info/info.component';
 
 
 
+
+
+
+
+
+
+
+
+
 const Header = ({ currentUser }) => (
-    <div className='header'>
+    
+  <div className= 'header'>
         <Info/>
       
         <div className='links'>

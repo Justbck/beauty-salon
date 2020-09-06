@@ -1,10 +1,15 @@
 .header{
 
+
     position: fixed;
     width:100%;
     overflow: hidden;
     width: 100%;
+    background-color:rgb(189, 145, 145);
+    
+  
 
+  
 }
 
 .links{
@@ -21,14 +26,13 @@
 
   font-size: 17px;
   text-decoration: none;
-  color: #241919;
+  color: #ffffff;
   padding: 14px;
   transition: .3s;
 
 
   &:hover {
-    color: #ffffff;
-    text-shadow: 2px 2px 10px seashell;
+    text-shadow: 1px 1px 10px seashell;
     cursor: pointer;
   }
 
